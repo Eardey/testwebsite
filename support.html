@@ -1,0 +1,201 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Troubleshooting Common Issues - Ernst &amp; Young</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#161300",
+                      "surface-container": "#202020",
+                      "primary-fixed": "#e7d100",
+                      "on-surface": "#e5e2e1",
+                      "tertiary-fixed": "#e3e2bc",
+                      "on-tertiary": "#313214",
+                      "on-error-container": "#ffdad6",
+                      "secondary": "#ccc6a1",
+                      "inverse-primary": "#655d00",
+                      "surface-container-highest": "#363534",
+                      "on-secondary-fixed": "#1b1700",
+                      "primary-container": "#4c4600",
+                      "secondary-fixed-dim": "#ccc6a1",
+                      "on-tertiary-container": "#e3e2bc",
+                      "inverse-on-surface": "#31302f",
+                      "surface-bright": "#393939",
+                      "on-primary": "#353100",
+                      "on-background": "#e5e2e1",
+                      "on-secondary": "#343116",
+                      "surface-variant": "#484742",
+                      "error-container": "#93000a",
+                      "outline-variant": "#484742",
+                      "outline": "#929088",
+                      "primary": "#d1bc00",
+                      "primary-fixed-dim": "#d1bc00",
+                      "on-primary-container": "#fff085",
+                      "on-error": "#690005",
+                      "secondary-container": "#4b482b",
+                      "surface-container-lowest": "#0e0e0e",
+                      "error": "#ffb4ab",
+                      "on-secondary-container": "#e9e2bc",
+                      "surface-tint": "#d1bc00",
+                      "on-tertiary-fixed-variant": "#48492a",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-dim": "#131313",
+                      "secondary-fixed": "#e9e2bc",
+                      "on-primary-fixed-variant": "#4c4600",
+                      "tertiary": "#c7c6a2",
+                      "inverse-surface": "#e5e2e1",
+                      "background": "#131313",
+                      "tertiary-fixed-dim": "#c7c6a2",
+                      "on-tertiary-fixed": "#1b1d02",
+                      "tertiary-container": "#48492a",
+                      "surface-container-high": "#2a2a29",
+                      "on-surface-variant": "#c9c6bd",
+                      "on-secondary-fixed-variant": "#4b482b",
+                      "surface": "#131313"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "base": "4px",
+                      "sidebar-width": "280px",
+                      "container-max": "1280px",
+                      "lg": "24px",
+                      "xl": "32px",
+                      "md": "16px",
+                      "xs": "4px",
+                      "sm": "8px",
+                      "2xl": "48px",
+                      "3xl": "64px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "code-md": ["JetBrains Mono"],
+                      "body-sm": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-sm": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "code-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Ambient shadows for depth */
+        .ambient-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .code-block-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: var(--color-outline-variant) transparent;
+        }
+        .code-block-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .code-block-scroll::-webkit-scrollbar-thumb {
+            background-color: var(--color-outline-variant);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col" data-mode="connect"><!-- TopNavBar -->
+<header class="bg-surface border-b border-surface-container-highest py-4 px-6 md:px-margin-desktop sticky top-0 z-50">
+<div class="max-w-container-max mx-auto flex items-center justify-between">
+<div class="flex items-center gap-4">
+<!-- EY Logo Placeholder -->
+<div class="w-12 h-12 bg-primary-container rounded flex items-center justify-center font-bold text-on-primary-container text-xl border-2 border-primary-container">
+                    EY
+                </div>
+<h1 class="text-headline-sm font-semibold hidden sm:block">IT Support Hub</h1>
+</div>
+<nav class="flex items-center gap-6">
+<a aria-label="Home" class="text-on-surface hover:text-primary-container transition-colors hidden md:block flex items-center justify-center" href="{{DATA:SCREEN:SCREEN_1}}">
+<span class="material-symbols-outlined" style="margin-top: 2px;">home</span>
+</a><a class="text-on-surface hover:text-primary-container transition-colors hidden md:block" href="{{DATA:SCREEN:SCREEN_15}}">Contact</a>
+<div class="flex items-center gap-2">
+</div>
+</nav>
+</div>
+</header>
+<!-- Main Content Layout -->
+<div class="flex-grow flex justify-center w-full">
+<main class="max-w-container-max w-full px-md md:px-lg py-xl flex flex-col md:flex-row gap-lg">
+<!-- Left Sidebar (Desktop) -->
+<aside class="hidden lg:block w-sidebar-width shrink-0">
+<div class="sticky top-[100px] flex flex-col gap-xl">
+<!-- TOC -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-md ambient-shadow">
+<h3 class="text-headline-sm font-semibold text-on-surface mb-md">Article Contents</h3>
+<nav class="flex flex-col gap-sm border-l-2 border-surface-container-high ml-xs pl-sm"><a class="text-body-sm text-secondary hover:underline" href="#web-apps">1. Web Application Issues</a><a class="text-body-sm text-secondary hover:underline" href="#wifi-reset">2. Resetting Wi-Fi Connection</a><a class="text-body-sm text-secondary hover:underline" href="#network-troubleshooter">3. Windows Network Troubleshooter</a></nav>
+</div>
+<!-- Related Articles -->
+</div>
+</aside>
+<!-- Article Canvas -->
+<article class="flex-grow bg-surface-container-lowest rounded-xl border border-outline-variant p-lg md:p-2xl ambient-shadow w-full max-w-3xl">
+<!-- Article Header -->
+<header class="mb-xl border-b border-outline-variant pb-md">
+<h1 class="text-headline-lg-mobile md:text-headline-lg text-primary mb-sm">Troubleshooting Common Issues</h1>
+</header>
+<!-- Article Body -->
+<div class="prose max-w-none flex flex-col gap-[1.5em]">
+<p class="text-body-lg text-on-surface leading-relaxed">This guide outlines the standard operating procedures for diagnosing and resolving common technical issues, including web application performance, network connectivity resets, and using built-in Windows diagnostic tools.</p>
+<!-- Info Callout -->
+<!-- Warning Callout -->
+<!-- Code Block -->
+<h2 class="text-headline-md font-semibold text-primary mt-lg mb-xs" id="web-apps">1. Web Application Issues</h2><p class="text-body-md text-on-surface">For employees in Assurance, Tax, Strategy and Transactions, and Consulting, web application performance is critical. If you experience lag or crashes, particularly when working with large spreadsheets in browser-based tools, ensure your browser cache is cleared and hardware acceleration is enabled in settings.</p><div class="flex flex-col gap-xl mt-lg">
+<div class="flex flex-col gap-sm">
+<div class="rounded-lg overflow-hidden border border-outline-variant ambient-shadow">
+<img alt="Step 1: Clear browsing data settings" class="w-full h-auto" src="img1.png">
+</div>
+<p class="text-body-sm text-on-surface-variant italic">Step 1: Open Edge Settings and navigate to 'Privacy, search, and services' &gt; 'Clear browsing data'. Select 'All time' and ensure history and cache options are checked.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="rounded-lg overflow-hidden border border-outline-variant ambient-shadow">
+<img alt="Step 2: Additional data selection" class="w-full h-auto" src="img2.png">
+</div>
+<p class="text-body-sm text-on-surface-variant italic">Step 2: Scroll down to ensure 'Autofill form data', 'Site permissions', and 'All data from previous versions' are also selected for a comprehensive clear.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="rounded-lg overflow-hidden border border-outline-variant ambient-shadow">
+<img alt="Step 3: Final verification and clearing" class="w-full h-auto" src="img3.png">
+</div>
+<p class="text-body-sm text-on-surface-variant italic">Step 3: Finally, verify 'Media Foundation data' is included, then click 'Clear now' to resolve performance issues.</p>
+</div>
+</div><h2 class="text-headline-md font-semibold text-primary mt-lg mb-xs" id="wifi-reset">2. Resetting Wi-Fi Connection</h2><p class="text-body-md text-on-surface">If you are experiencing persistent Wi-Fi connectivity issues, you can perform a network reset using the Command Prompt (CMD).</p><div class="flex flex-col gap-sm mb-md"><p class="text-body-md text-on-surface">Follow these steps to open the Command Prompt:</p><ol class="flex flex-col gap-xs ml-md list-decimal text-body-md text-on-surface"><li class="">Press the <span class="font-semibold">Windows Key</span> on your keyboard or click the <span class="font-semibold">Start</span> button.</li><li class="">Type <span class="font-semibold">"cmd"</span> or <span class="font-semibold">"Command Prompt"</span> into the search bar.</li><li class="">Click on the <span class="font-semibold">Command Prompt</span> app to open it.</li><li class="">Once the terminal window appears, type the following commands in order:</li></ol></div><div class="flex flex-col gap-md mt-md"><div class="bg-surface-container p-md rounded-lg border border-outline-variant font-mono text-sm text-on-surface">ipconfig /release</div><div class="bg-surface-container p-md rounded-lg border border-outline-variant font-mono text-sm text-on-surface">ipconfig /renew</div><div class="bg-surface-container p-md rounded-lg border border-outline-variant font-mono text-sm text-on-surface">ipconfig /flushdns</div></div><p class="text-body-md text-on-surface mt-md">Restart your computer after executing these commands to apply the changes.</p><h2 class="text-headline-md font-semibold text-primary mt-lg mb-xs" id="network-troubleshooter">3. Windows Network Troubleshooter</h2><p class="text-body-md text-on-surface">If the manual commands do not resolve your issue, you can use the built-in Windows Network Troubleshooter to automatically diagnose and fix common problems.</p><div class="flex flex-col gap-sm mb-md"><p class="text-body-md text-on-surface">Follow these steps to run the troubleshooter:</p><ol class="flex flex-col gap-xs ml-md list-decimal text-body-md text-on-surface"><li class="">Start by pressing <span class="font-semibold">Win + I</span> or clicking the <span class="font-semibold">Windows logo</span> &gt; <span class="font-semibold">Settings</span>.</li><li class="">Select <span class="font-semibold">Updates &amp; Security</span>.</li><li class="">Choose <span class="font-semibold">Troubleshoot</span> from the left-hand sidebar.</li><li class="">Select <span class="font-semibold">Additional troubleshooters</span>.</li><li class="">Click <span class="font-semibold">Internet Connections</span> and hit '<span class="font-semibold">Run the troubleshooter</span>'.</li></ol></div><div class="flex flex-col gap-xl mt-lg"><div class="flex flex-col gap-sm"><div class="rounded-lg overflow-hidden border border-outline-variant ambient-shadow"><img alt="Settings Home" class="w-full h-auto" src="settings_menu.png"></div><p class="text-body-sm text-on-surface-variant italic">Step 1: Open the Windows Settings menu and navigate to 'Update &amp; Security' to access system maintenance tools.&nbsp;</p></div><div class="flex flex-col gap-sm"><div class="rounded-lg overflow-hidden border border-outline-variant ambient-shadow"><img alt="Update &amp; Security" class="w-full h-auto" src="updates.png"></div><p class="text-body-sm text-on-surface-variant italic">Step 2: Select 'Troubleshoot' from the left navigation pane.</p></div><div class="flex flex-col gap-sm"><div class="rounded-lg overflow-hidden border border-outline-variant ambient-shadow"><img alt="Troubleshoot sidebar" class="w-full h-auto" src="troubleshoot.png"></div><p class="text-body-sm text-on-surface-variant italic">Step 3: Click on 'Additional troubleshooters' and run the 'Internet Connections' tool.&nbsp;</p></div><div class="flex flex-col gap-sm"><div class="rounded-lg overflow-hidden border border-outline-variant ambient-shadow"><img alt="Additional Troubleshooters" class="w-full h-auto" src="internet_troubleshoot.png"></div><p class="text-body-sm text-on-surface-variant italic">Step 4: Select 'Internet Connections' and click on 'Run the troubleshooter'.</p></div></div><p class="text-body-md text-on-surface mt-md">If you are using or planning to use an Ethernet cable, and encounter any Ethernet-related issues, please proceed to the IT help-desk for further assistance.</p></div>
+</article>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-surface border-t border-surface-container-highest py-8 px-6 md:px-margin-desktop mt-auto"><div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4"><div class="flex items-center gap-2"><div class="w-8 h-8 bg-primary-container rounded flex items-center justify-center font-bold text-on-primary-container text-sm">EY</div><span class="text-body-md text-on-surface-variant">© 2026 Ernst &amp; Young Global Limited. All Rights Reserved.</span></div><div class="flex gap-6"><a class="text-body-md text-on-surface-variant hover:text-primary-container transition-colors" href="#">IT Policies</a><a class="text-body-md text-on-surface-variant hover:text-primary-container transition-colors" href="#">Privacy Statement</a><a class="text-body-md text-on-surface-variant hover:text-primary-container transition-colors" href="#">Terms of Use</a></div></div></footer>
+
+
+
+
+</body></html>

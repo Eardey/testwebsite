@@ -1,0 +1,183 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>IT Support Hub - SGV &amp; Co. | EY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#393939",
+                        "secondary": "#c8c6c6",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#e4e2e1",
+                        "surface-container": "#20201f",
+                        "tertiary-container": "#00fbfc",
+                        "secondary-container": "#474747",
+                        "outline": "#979177",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary": "#ffffff",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed": "#fde400",
+                        "inverse-primary": "#6a5f00",
+                        "on-tertiary-fixed": "#002020",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed": "#00fbfc",
+                        "surface": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "surface-variant": "#353535",
+                        "outline-variant": "#4b4731",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#716500",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#353535",
+                        "primary-container": "#fde400",
+                        "tertiary": "#ffffff",
+                        "on-secondary-container": "#b6b5b4",
+                        "on-error": "#690005",
+                        "on-tertiary": "#003737",
+                        "surface-tint": "#dec800",
+                        "on-tertiary-container": "#007071",
+                        "surface-container-low": "#1c1b1b",
+                        "on-surface-variant": "#cdc7aa",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "primary-fixed-dim": "#dec800",
+                        "on-tertiary-fixed-variant": "#004f50",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "inverse-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "tertiary-fixed-dim": "#00dcdd",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-secondary": "#303030",
+                        "on-primary": "#373100",
+                        "on-primary-fixed-variant": "#504700",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-fixed": "#201c00",
+                        "on-surface": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "gutter-desktop": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313; /* bg-background */
+            color: #e5e2e1; /* text-on-background */
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar Component -->
+<header class="bg-surface-dim text-secondary-fixed-dim sticky top-0 w-full z-50 border-b border-outline shadow-none">
+<div class="flex justify-between items-center h-16 px-6 max-w-container-max mx-auto w-full">
+<!-- Brand -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container rounded flex items-center justify-center font-bold text-on-primary-container text-xl border-2 border-primary-container">
+                    EY
+                </div>
+<h1 class="text-headline-sm font-semibold hidden sm:block">IT Support Hub</h1>
+</div>
+<!-- Navigation Links -->
+<!-- Trailing Action & Search -->
+<div class="flex items-center gap-6"><a href="index.html" class="text-body-md font-medium text-on-surface hover:text-primary-fixed transition-colors"><span class="material-symbols-outlined">home</span></a>
+<button class="hidden md:flex items-center justify-center text-on-surface hover:text-primary-fixed transition-colors">
+
+</button>
+
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col w-full max-w-container-max mx-auto px-6 py-margin-mobile md:py-margin-desktop gap-16 md:gap-24">
+<!-- Hero Section -->
+<section class="max-w-3xl">
+<h1 class="text-headline-lg font-bold mb-4 text-on-surface">Hardware &amp; Software Resolution Center</h1>
+<p class="text-body-lg text-on-surface-variant mb-8">Dedicated support channels for SGV &amp; Co. | EY professionals. To ensure operational continuity, please direct all hardware malfunctions and software configuration requests through our standardized resolution pathways below.</p>
+</section>
+<!-- Bento Grid / Support Options -->
+<section class="grid grid-cols-1 gap-8 max-w-3xl">
+<!-- Option 1: In-Person -->
+<div class="bg-surface-container-low border border-outline-variant p-8 md:p-12 flex flex-col relative group overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-gradient-to-br from-primary-fixed to-transparent pointer-events-none"></div>
+<div class="mb-8 flex items-center justify-center w-16 h-16 bg-surface-container border border-outline-variant">
+<span class="material-symbols-outlined text-primary-fixed text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">store</span>
+</div>
+<h4 class="text-headline-sm font-medium mb-2 text-on-surface">On-Site Help-desk</h4>
+<p class="text-body-md text-on-surface-variant">For immediate hardware diagnostics, peripheral replacements, or critical physical device failures, visit the IT Help-desk located in your local office. Operating hours align with standard business hours.</p>
+<a class="inline-flex items-center gap-2 text-primary hover:text-primary-fixed font-label-md text-label-md transition-colors uppercase border-b border-transparent hover:border-primary-fixed pb-1 self-start" href="location.html">
+                    Locate Office <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Option 2: ITSM Portal -->
+</section>
+<!-- Contextual Image/Data -->
+
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface border-t border-surface-container-highest py-8 px-6 md:px-margin-desktop mt-auto">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary-container rounded flex items-center justify-center font-bold text-on-primary-container text-sm">
+                    EY
+                </div>
+<span class="text-body-md text-on-surface-variant">© 2026 Ernst &amp; Young Global Limited. All Rights Reserved.</span>
+</div>
+<div class="flex gap-6">
+<a class="text-body-md text-on-surface-variant hover:text-primary-container transition-colors" href="#">IT Policies</a>
+<a class="text-body-md text-on-surface-variant hover:text-primary-container transition-colors" href="#">Privacy Statement</a>
+<a class="text-body-md text-on-surface-variant hover:text-primary-container transition-colors" href="#">Terms of Use</a>
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
