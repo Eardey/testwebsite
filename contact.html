@@ -1,183 +1,301 @@
-<!DOCTYPE html><html class="dark" lang="en" style=""><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IT Support Hub - SGV &amp; Co. | EY</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-bright": "#393939",
-                        "secondary": "#c8c6c6",
-                        "on-error-container": "#ffdad6",
-                        "secondary-fixed": "#e4e2e1",
-                        "surface-container": "#20201f",
-                        "tertiary-container": "#00fbfc",
-                        "secondary-container": "#474747",
-                        "outline": "#979177",
-                        "surface-container-lowest": "#0e0e0e",
-                        "primary": "#ffffff",
-                        "on-background": "#e5e2e1",
-                        "primary-fixed": "#fde400",
-                        "inverse-primary": "#6a5f00",
-                        "on-tertiary-fixed": "#002020",
-                        "surface-dim": "#131313",
-                        "tertiary-fixed": "#00fbfc",
-                        "surface": "#131313",
-                        "inverse-on-surface": "#313030",
-                        "surface-variant": "#353535",
-                        "outline-variant": "#4b4731",
-                        "error-container": "#93000a",
-                        "on-primary-container": "#716500",
-                        "error": "#ffb4ab",
-                        "surface-container-highest": "#353535",
-                        "primary-container": "#fde400",
-                        "tertiary": "#ffffff",
-                        "on-secondary-container": "#b6b5b4",
-                        "on-error": "#690005",
-                        "on-tertiary": "#003737",
-                        "surface-tint": "#dec800",
-                        "on-tertiary-container": "#007071",
-                        "surface-container-low": "#1c1b1b",
-                        "on-surface-variant": "#cdc7aa",
-                        "on-secondary-fixed": "#1b1c1c",
-                        "primary-fixed-dim": "#dec800",
-                        "on-tertiary-fixed-variant": "#004f50",
-                        "secondary-fixed-dim": "#c8c6c6",
-                        "inverse-surface": "#e5e2e1",
-                        "background": "#131313",
-                        "tertiary-fixed-dim": "#00dcdd",
-                        "on-secondary-fixed-variant": "#474747",
-                        "on-secondary": "#303030",
-                        "on-primary": "#373100",
-                        "on-primary-fixed-variant": "#504700",
-                        "surface-container-high": "#2a2a2a",
-                        "on-primary-fixed": "#201c00",
-                        "on-surface": "#e5e2e1"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0px",
-                        "lg": "0px",
-                        "xl": "0px",
-                        "full": "0px"
-                    },
-                    "spacing": {
-                        "margin-desktop": "64px",
-                        "base": "8px",
-                        "margin-mobile": "20px",
-                        "gutter-desktop": "24px",
-                        "container-max": "1280px"
-                    },
-                    "fontFamily": {
-                        "headline-sm": ["Inter", "sans-serif"],
-                        "label-md": ["Inter", "sans-serif"],
-                        "headline-lg": ["Inter", "sans-serif"],
-                        "headline-md": ["Inter", "sans-serif"],
-                        "body-lg": ["Inter", "sans-serif"],
-                        "headline-lg-mobile": ["Inter", "sans-serif"],
-                        "body-md": ["Inter", "sans-serif"]
-                    },
-                    "fontSize": {
-                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
-                    }
-                }
-            }
-        }
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <style>
-        body {
-            background-color: #131313; /* bg-background */
-            color: #e5e2e1; /* text-on-background */
-        }
-    </style>
+  :root {
+    --bg: #131313;
+    --bg-dim: #0e0e0e;
+    --panel: #1c1b1b;
+    --panel-low: #1c1b1b;
+    --border: #4b4731;
+    --text: #e5e2e1;
+    --text-muted: #cdc7aa;
+    --accent: #fde400;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  a { color: inherit; }
+
+  .material-symbols-outlined {
+    vertical-align: middle;
+  }
+
+  /* Header */
+  header {
+    background: var(--bg-dim);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 64px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .logo-badge {
+    width: 48px;
+    height: 48px;
+    background: var(--accent);
+    color: #201c00;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .brand h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  header nav a {
+    text-decoration: none;
+    color: var(--text);
+    transition: color 0.2s ease;
+  }
+  header nav a:hover { color: var(--accent); }
+
+  /* Main */
+  main {
+    flex: 1;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .hero {
+    max-width: 640px;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    margin: 0 0 16px;
+  }
+  .hero p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .support-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 640px;
+  }
+
+  .option-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--panel-low);
+    border: 1px solid var(--border);
+    padding: 40px;
+  }
+  .option-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--accent), transparent);
+    opacity: 0.08;
+    pointer-events: none;
+  }
+
+  .option-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .option-icon .material-symbols-outlined {
+    color: var(--accent);
+    font-size: 28px;
+  }
+
+  .option-card h4 {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 0 8px;
+  }
+  .option-card p {
+    color: var(--text-muted);
+    margin: 0 0 20px;
+  }
+
+  .option-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .option-link:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .option-link .material-symbols-outlined {
+    font-size: 16px;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--bg-dim);
+    border-top: 1px solid #353535;
+    padding: 32px 24px;
+    margin-top: auto;
+  }
+  .footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .footer-logo {
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    color: #201c00;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .footer-brand span {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  .footer-links {
+    display: flex;
+    gap: 24px;
+  }
+  .footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+  }
+  .footer-links a:hover { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .option-card { padding: 28px; }
+  }
+</style>
 </head>
-<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
-<!-- TopNavBar Component -->
-<header class="bg-surface-dim text-secondary-fixed-dim sticky top-0 w-full z-50 border-b border-outline shadow-none">
-<div class="flex justify-between items-center h-16 px-6 max-w-container-max mx-auto w-full">
-<!-- Brand -->
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 bg-primary-container rounded flex items-center justify-center font-bold text-on-primary-container text-xl border-2 border-primary-container">
-                    EY
-                </div>
-<h1 class="text-headline-sm font-semibold hidden sm:block">IT Support Hub</h1>
-</div>
-<!-- Navigation Links -->
-<!-- Trailing Action & Search -->
-<div class="flex items-center gap-6"><a href="index.html" class="text-body-md font-medium text-on-surface hover:text-primary-fixed transition-colors"><span class="material-symbols-outlined">home</span></a>
-<button class="hidden md:flex items-center justify-center text-on-surface hover:text-primary-fixed transition-colors">
+<body>
 
-</button>
-
-</div>
-</div>
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <div class="logo-badge">EY</div>
+      <h1>IT Support Hub</h1>
+    </div>
+    <nav>
+      <a href="index.html" aria-label="Home">
+        <span class="material-symbols-outlined">home</span>
+      </a>
+    </nav>
+  </div>
 </header>
-<!-- Main Content Canvas -->
-<main class="flex-grow flex flex-col w-full max-w-container-max mx-auto px-6 py-margin-mobile md:py-margin-desktop gap-16 md:gap-24">
-<!-- Hero Section -->
-<section class="max-w-3xl">
-<h1 class="text-headline-lg font-bold mb-4 text-on-surface">Hardware &amp; Software Resolution Center</h1>
-<p class="text-body-lg text-on-surface-variant mb-8">Dedicated support channels for SGV &amp; Co. | EY professionals. To ensure operational continuity, please direct all hardware malfunctions and software configuration requests through our standardized resolution pathways below.</p>
-</section>
-<!-- Bento Grid / Support Options -->
-<section class="grid grid-cols-1 gap-8 max-w-3xl">
-<!-- Option 1: In-Person -->
-<div class="bg-surface-container-low border border-outline-variant p-8 md:p-12 flex flex-col relative group overflow-hidden">
-<div class="absolute inset-0 opacity-10 bg-gradient-to-br from-primary-fixed to-transparent pointer-events-none"></div>
-<div class="mb-8 flex items-center justify-center w-16 h-16 bg-surface-container border border-outline-variant">
-<span class="material-symbols-outlined text-primary-fixed text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">store</span>
-</div>
-<h4 class="text-headline-sm font-medium mb-2 text-on-surface">On-Site Help-desk</h4>
-<p class="text-body-md text-on-surface-variant">For immediate hardware diagnostics, peripheral replacements, or critical physical device failures, visit the IT Help-desk located in your local office. Operating hours align with standard business hours.</p>
-<a class="inline-flex items-center gap-2 text-primary hover:text-primary-fixed font-label-md text-label-md transition-colors uppercase border-b border-transparent hover:border-primary-fixed pb-1 self-start" href="location.html">
-                    Locate Office <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<!-- Option 2: ITSM Portal -->
-</section>
-<!-- Contextual Image/Data -->
 
+<main>
+  <section class="hero">
+    <h1>Hardware &amp; Software Resolution Center</h1>
+    <p>
+      Support for SGV &amp; Co. | EY professionals. Route hardware malfunctions and
+      software configuration requests through the channels below to keep things running
+      smoothly.
+    </p>
+  </section>
+
+  <section class="support-options">
+    <div class="option-card">
+      <div class="option-icon">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">store</span>
+      </div>
+      <h4>On-Site Help-desk</h4>
+      <p>
+        For hardware diagnostics, peripheral replacements, or a device that's stopped
+        working, visit the IT Help-desk in your local office. Hours follow standard
+        business hours.
+      </p>
+      <a class="option-link" href="location.html">
+        Locate office
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+  </section>
 </main>
-<!-- Footer Component -->
-<footer class="bg-surface border-t border-surface-container-highest py-8 px-6 md:px-margin-desktop mt-auto">
-<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-<div class="flex items-center gap-2">
-<div class="w-8 h-8 bg-primary-container rounded flex items-center justify-center font-bold text-on-primary-container text-sm">
-                    EY
-                </div>
-<span class="text-body-md text-on-surface-variant">© 2026 Ernst &amp; Young Global Limited. All Rights Reserved.</span>
-</div>
-<div class="flex gap-6">
-<a class="text-body-md text-on-surface-variant hover:text-primary-container transition-colors" href="#">IT Policies</a>
-<a class="text-body-md text-on-surface-variant hover:text-primary-container transition-colors" href="#">Privacy Statement</a>
-<a class="text-body-md text-on-surface-variant hover:text-primary-container transition-colors" href="#">Terms of Use</a>
-</div>
-</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">EY</div>
+      <span>© 2026 Ernst &amp; Young Global Limited. All Rights Reserved.</span>
+    </div>
+    <div class="footer-links">
+      <a href="#">IT Policies</a>
+      <a href="#">Privacy Statement</a>
+      <a href="#">Terms of Use</a>
+    </div>
+  </div>
 </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body></html>
+</body>
+</html>
